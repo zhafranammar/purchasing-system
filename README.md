@@ -1,25 +1,6 @@
-# Laravel SB Admin 2
+# Purchasing System
 
-SB Admin 2 for Laravel.
-
-| Laravel Version | Branch | Support     |
-|-----------------|--------|-------------|
-| 11.0            | main   |             |
-| 10.0            | v10.0  |             |
-| 9.0             | v9.0   | End of life |
-| 8.0             | v8.0   | End of life |
-
-## Requirements
-
-- PHP >= 8.0
-- BCMath PHP Extension
-- Ctype PHP Extension
-- JSON PHP Extension
-- Mbstring PHP Extension
-- OpenSSL PHP Extension
-- PDO PHP Extension
-- Tokenizer PHP Extension
-- XML PHP Extension
+Purchasing System for Laravel.
 
 ## Installation
 
@@ -28,51 +9,37 @@ SB Admin 2 for Laravel.
 - Rename or copy `.env.example` file to `.env`
 - Run `php artisan key:generate`
 - Set your database credentials in your `.env` file
-
-## Note
-
-Recommend to install this preset on a project that you are starting from scratch, otherwise your project's design might break.
-
-If you found this project useful, then please consider giving it a :star:
-
-## Credits
-
-Laravel SB Admin 2 uses some open-source third-party libraries/packages, many thanks to the web community.
-
-- Laravel - Open source framework.
-- LaravelEasyNav - Making managing navigation in Laravel easy.
-- SB Admin 2 - Thanks to Start Bootstrap.
+- Run `php artisan migrate:fresh --seed`
+- Run `php artisan serve`
+- Open `http://localhost:8000/login`
+- Login with credential
+  admin@admin.com / admin or staff@mail.com / staff
+- Explore the Purchasing System
 
 ## Preview
 
+`welcome`
+
+<img src="ss/welcome.png">
+
+---
+
 `login`
 
-<img src="https://imgur.com/YjGp6Sbl.png">
+<img src="ss/login.PNG">
 
-***
-
-`register`
-
-<img src="https://imgur.com/Wj09cu4l.png">
-
-***
+---
 
 `dashboard`
 
-<img src="https://imgur.com/CrmOfT5l.png">
+<img src="ss/dashboard.PNG">
 
-***
+---
 
-`profile`
+`admin page`
 
-<img src="https://imgur.com/5t4eS1rl.png">
+<img src="ss/admin1.png">
+<img src="ss/admin2.PNG">
 
-***
+---
 
-`logout`
-
-<img src="https://imgur.com/d9JclOYl.png">
-
-## License
-
-Licensed under the [MIT](LICENSE) license.
