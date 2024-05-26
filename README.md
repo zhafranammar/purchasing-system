@@ -43,3 +43,6 @@ Purchasing System for Laravel.
 
 ---
 
+## Link Demo Web
+
+https://youtu.be/s-j7nsmjKf0
