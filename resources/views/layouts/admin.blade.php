@@ -45,7 +45,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home')}}">
             <div class="sidebar-brand-icon">
                 <i class="fas fa-cart-shopping"></i>
             </div>
@@ -70,6 +70,14 @@
         <div class="sidebar-heading">
             {{ __('Purchase') }}
         </div>
+
+         <!-- Nav Item - Orders -->
+        <li class="nav-item {{ request()->routeIs('orders.*') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('orders.index') }}">
+                <i class="fas fa-fw fa-cart-plus"></i>
+                <span>{{ __('Orders') }}</span>
+            </a>
+        </li>
         @if ( Auth::user()->role == 'superadmin')
             <!-- Nav Item - Customers -->
             <li class="nav-item {{ request()->routeIs('customers.*') ? 'active' : '' }}">
@@ -88,23 +96,16 @@
             
         @endif
         
-        <!-- Nav Item - Orders -->
-        <li class="nav-item {{ request()->routeIs('orders.*') ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('orders.index') }}">
-                <i class="fas fa-fw fa-cart-plus"></i>
-                <span>{{ __('Orders') }}</span>
-            </a>
-        </li>
+       
         
 
         <!-- Divider -->
+        @if ( Auth::user()->role == 'superadmin')
         <hr class="sidebar-divider">
-
         <!-- Heading -->
         <div class="sidebar-heading">
             {{ __('Settings') }}
         </div>
-
         <!-- Nav Item - Orders -->
         <li class="nav-item {{ request()->routeIs('users.*') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('users.index') }}">
@@ -112,6 +113,7 @@
                 <span>{{ __('User') }}</span>
             </a>
         </li>
+        @endif
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">

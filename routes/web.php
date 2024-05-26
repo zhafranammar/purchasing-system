@@ -35,7 +35,7 @@ Route::middleware(['auth', 'role:superadmin'])->group(function () {
     Route::resource('orders', OrderController::class);
 });
 Route::middleware(['auth', 'role:superadmin,staff'])->group(function () {
-    Route::resource('orders', OrderController::class)->except(['update', 'destroy']);
+    Route::resource('orders', OrderController::class)->except(['destroy']);
     Route::post('/order-items', [OrderController::class, 'addOrderItem']);
     Route::delete('/order-items/{id}', [OrderController::class, 'deleteOrderItem'])->name('order-items.delete');
 });

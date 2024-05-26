@@ -84,11 +84,11 @@
             <label for="total">Total</label>
             <input type="text" class="form-control" id="total" name="total" value="{{ $order->total }}" disabled>
         </div>
-        @if ( Auth::user()->role == 'superadmin')
+        {{-- @if ( Auth::user()->role == 'superadmin') --}}
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Update Order</button>
             </div>
-        @endif
+        {{-- @endif --}}
         
     </form>
 </div>
